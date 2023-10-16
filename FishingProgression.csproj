@@ -2,9 +2,6 @@
 
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <GamePath>D:\steam\steamapps\common\Stardew Valley</GamePath>
-  </PropertyGroup>
-  <PropertyGroup>
     <AssemblyName>FishingProgression</AssemblyName>
     <RootNamespace>FishingProgression</RootNamespace>
     <Version>1.0.0</Version>
