@@ -18,6 +18,15 @@ namespace FishingProgression
         public bool EnableDoubleHook { get; set; }
         public float DoubleHookChance { get; set; }
 
+        public bool EnableAutoHook { get; set; }
+        public int AutoHookRequirement {  get; set; }
+
+        public bool EnableAutoTreasureChest {  get; set; }
+        public int AutoTreasureChestRequirement { get; set; }
+
+        public bool EnableBiteTimeReduction { get; set; }
+        public int BiteTimeReductionAmount { get; set; }
+
         public ModConfig() 
         {
 
@@ -29,6 +38,15 @@ namespace FishingProgression
 
             this.EnableDoubleHook = true;
             this.DoubleHookChance = 1.0f;
+
+            this.EnableAutoHook = true;
+            this.AutoHookRequirement = 5;
+
+            this.EnableAutoTreasureChest = true;
+            this.AutoTreasureChestRequirement = 10;
+
+            this.EnableBiteTimeReduction = true;
+            this.BiteTimeReductionAmount = 1;
         }
 
     }

@@ -2,7 +2,6 @@
 using StardewValley;
 using StardewValley.Tools;
 using System;
-using StardewModdingAPI;
 using System.Runtime.CompilerServices;
 
 namespace FishingProgression.framework
@@ -19,7 +18,7 @@ namespace FishingProgression.framework
         }
 
         // patches need to be static!
-        internal static bool pullFishFromWater_Prefix(FishingRod __instance, ref bool caughtDouble)
+        internal static bool pullFishFromWater_Prefix(FishingRod __instance, ref int numCaught)
         {
             try
             {
@@ -30,9 +29,9 @@ namespace FishingProgression.framework
 
                 if (Globals.Config.EnableDoubleHook && rnd <= chance)
                 {
-                    caughtDouble = true;
+                    numCaught = numCaught + 1;  
                 }   
-                return true; // don't run original logic
+                return true; // run original logic
             }
             catch (Exception ex)
             {

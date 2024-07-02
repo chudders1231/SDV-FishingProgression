@@ -111,6 +111,65 @@ namespace FishingProgression.framework
                 interval: 0.5f,
                 formatValue: value => String.Format("{0:0.0}%", value)
             );
+
+            configMenu.AddBoolOption(
+                 mod: Globals.Manifest,
+                 name: () => "Enable Auto Hook",
+                 tooltip: () => "This will enable autohooking when fishing.",
+                 getValue: () => Globals.Config.EnableAutoHook,
+                 setValue: value => Globals.Config.EnableAutoHook = value
+             );
+
+            configMenu.AddNumberOption(
+                mod: Globals.Manifest,
+                name: () => "Auto Hook Level",
+                tooltip: () => "At which level should you unlock auto hooking?.",
+                getValue: () => Globals.Config.AutoHookRequirement,
+                setValue: value => Globals.Config.AutoHookRequirement = value,
+                min: 0,
+                max: 10,
+                interval: 1
+
+            );
+
+            configMenu.AddBoolOption(
+                 mod: Globals.Manifest,
+                 name: () => "Enable Auto Treasure",
+                 tooltip: () => "This will enable automatically catching treasure when fishing.",
+                 getValue: () => Globals.Config.EnableAutoTreasureChest,
+                 setValue: value => Globals.Config.EnableAutoTreasureChest = value
+             );
+
+            configMenu.AddNumberOption(
+                mod: Globals.Manifest,
+                name: () => "Auto Treasure Level",
+                tooltip: () => "At which level should you unlock auto treasure?",
+                getValue: () => Globals.Config.AutoTreasureChestRequirement,
+                setValue: value => Globals.Config.AutoTreasureChestRequirement = value,
+                min: 0,
+                max: 10,
+                interval: 1
+            );
+
+            configMenu.AddBoolOption(
+                 mod: Globals.Manifest,
+                 name: () => "Enable Bite Time Reduction",
+                 tooltip: () => "This will enable or disable the chance to double hook (applies to both fish and trash).",
+                 getValue: () => Globals.Config.EnableDoubleHook,
+                 setValue: value => Globals.Config.EnableDoubleHook = value
+             );
+
+            configMenu.AddNumberOption(
+                mod: Globals.Manifest,
+                name: () => "Bite Time Reduction Amount",
+                tooltip: () => "This is the percentage reduction per level applied to the bite time.",
+                getValue: () => Globals.Config.BiteTimeReductionAmount,
+                setValue: value => Globals.Config.BiteTimeReductionAmount = value,
+                min: 1,
+                max: 10,
+                interval: 1,
+                formatValue: value => String.Format("{0:0}%", value)
+            );
         }
     }
 }

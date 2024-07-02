@@ -9,6 +9,7 @@ namespace FishingProgression.framework
 {
     internal class Log
     {
+        #nullable enable
         public static IMonitor? Monitor;
 
         public static void Verbose(object obj) => Monitor?.VerboseLog(obj.ToString() ?? string.Empty);

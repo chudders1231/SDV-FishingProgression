@@ -1,10 +1,10 @@
 {
   "Name": "Fishing Progression",
   "Author": "ChadlyMasterson",
-  "Version": "1.0.0",
+  "Version": "1.0.2",
   "Description": "Adds small, configurable, progression buffs to fishing.",
   "UniqueID": "chadlymasterson.fishingprogression",
   "EntryDll": "FishingProgression.dll",
-  "MinimumApiVersion": "3.0.0",
+  "MinimumApiVersion": "4.0.8",
   "UpdateKeys": [ "Nexus:18749" ]
 }
